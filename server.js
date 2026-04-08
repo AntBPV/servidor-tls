@@ -7,7 +7,7 @@ app.use(helmet());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Servidor TLS funcionando');
+  res.send('Servidor TLS funcionando - Deploy automatico: OK');
 });
 
 app.listen(PORT, () => {
