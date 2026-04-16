@@ -222,19 +222,4 @@ router.post("/refresh-token", (req, res) => {
   });
 });
 
-router.get("/", (req, res) => {
-  res.json({
-    sistema: "📚 Biblioteca Segura - API",
-    version: "1.0.0",
-    estado: "🟢 Activo",
-    rutas: {
-      "POST /login-paso1": "Paso 1 - Envía código 2FA a tu correo",
-      "POST /login-paso2": "Paso 2 - Valida código y obtiene tokens",
-      "GET  /mi-espacio": "🔐 [Solo estudiante] Ver libros prestados",
-      "GET  /dashboard-admin": "🔐 [Solo admin] Ver inventario",
-      "POST /refresh-token": "Renovar Access Token sin re-autenticar",
-    },
-  });
-});
-
 module.exports = router;
